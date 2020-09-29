@@ -3,17 +3,20 @@
 @{
     ViewData["Title"] = "Home page";
 }
+@section Styles {
+    <link href="@Url.Content("~/css/postit.css")" rel="stylesheet" type="text/css" />
+}
 
 <div class="text-center">
-    <h1 class="display-4 m-3">Welcome to my TO DO list</h1>
+    <h1 class="display-4 m-3 p-3">Welcome to my TO DO list</h1>
     </div>
 
     <div class="row d-flex justify-content-center">
     @foreach (var item in Model.Item) {
-        <div class="card text-center m-3 p-3" style="width: 18rem;">
-            <h4 class="card-title">
+        <div class="card text-center m-3 p-3">
+            <h3 class="card-title">
                 @Html.DisplayFor(modelItem => item.Name)
-            </h4>
+            </h3>
             <p class="card-text">
                 @Html.DisplayFor(modelItem => item.Message)
             </p>
@@ -24,4 +27,4 @@
         </div>
     }
     </div>
-<p class="text-center">Add / edit or remove items <a href="/items">here</a>.</p>
+<p class="text-center mt-2">Add / edit or remove items <a href="/items">here</a>.</p>

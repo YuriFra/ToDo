@@ -18,10 +18,13 @@ a {
   border-color: #1861ac;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-item .nav-link.active, .nav-item .show > .nav-link {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+}
+.navbar-brand {
+  font-size: 30px;
 }
 
 /* Sticky footer styles
@@ -43,7 +46,10 @@ html {
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  box-shadow: 0 .50rem 1rem rgb(177, 231, 226);
+}
+.reverseshadow {
+  box-shadow: 0 -.50rem 1rem rgb(177, 231, 226);
 }
 
 button.accept-policy {
