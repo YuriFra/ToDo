@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -24,6 +26,7 @@ namespace ToDo.Pages.Items
         public async Task OnGetAsync()
         {
             Item = await _context.Items.ToListAsync();
+            Item = Item.OrderBy(day => day.Due).ToList();
         }
     }
 }
